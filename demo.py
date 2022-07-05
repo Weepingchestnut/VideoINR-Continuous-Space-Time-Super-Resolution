@@ -28,6 +28,7 @@ model.load_state_dict(torch.load(opt.model_path), strict=True)
 model.eval()
 model = model.to(device)
 
+
 def single_forward(model, imgs_in, space_scale, time_scale):
     with torch.no_grad():
         b, n, c, h, w = imgs_in.size()
