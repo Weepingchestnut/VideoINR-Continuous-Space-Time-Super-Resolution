@@ -4,7 +4,7 @@ use_tb_logger: false #true
 model: VideoSR_base
 distortion: sr
 scale: 4
-gpu_ids: [0, 1, 2, 3, 4, 5, 6, 7]
+gpu_ids: 0    # [0, 1, 2, 3, 4, 5, 6, 7]
 
 #### datasets
 datasets:
@@ -16,7 +16,7 @@ datasets:
     border_mode: false
     dataroot_GT: /dataset/Adobe240fps/train/
     dataroot_LQ: /dataset/Adobe240fps/train/
-    cache_keys: data/Vimeo7_train_keys.pkl
+    cache_keys: /data1/lzk_data/workspace/VideoINR/data/Vimeo7_train_keys.pkl
 
     N_frames: 7
     use_shuffle: true
@@ -44,8 +44,8 @@ path:
   pretrain_model_G: ~
   strict_load: false #true #
   resume_state: ~
-  models: /saved_checkpoints/
-  training_state: /saved_checkpoints/
+  models: /data1/lzk_data/workspace/VideoINR/saved_checkpoints/
+  training_state: /data1/lzk_data/workspace/VideoINR/saved_checkpoints/
 
 #### training settings: learning rate scheme, loss
 train:
